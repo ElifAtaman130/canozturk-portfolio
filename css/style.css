@@ -1,0 +1,40 @@
+/*
+    ==============================
+    NYP Prensipleri: Modülerlik
+    ==============================
+    Bu dosya, projenin görünümünden (Style) sorumludur ve HTML'den (Yapý) ayrýlmýþtýr.
+*/
+
+/* 1. Renk Paleti Tanýmlama (Can ÖZTÜRK Ýsteði: Kýrmýzý & Koyu Gri) */
+:root {
+    /* Koyu Gri için deðiþken */
+    --color-dark: #333;
+    /* Kýrmýzý için deðiþken */
+    --color-accent: #e74c3c;
+    /* Açýk Gri/Beyaz için deðiþken */
+    --color-light: #f4f4f4;
+}
+
+/* 2. Temel Vücut (Body) Ayarlarý */
+body {
+    font-family: Arial, sans-serif; /* Basit font seçimi */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Koyu Gri Arka Plan */
+    background: var(--color-dark);
+    /* Açýk Gri Yazý Rengi */
+    color: var(--color-light);
+}
+
+/* 3. Bölüm (Section) Stilleri */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-accent); /* Bölümleri kýrmýzý çizgiyle ayýrma */
+}
+
+/* Baþlýk Stilleri */
+h1, h2 {
+    color: var(--color-accent); /* Tüm baþlýklar Kýrmýzý */
+}
