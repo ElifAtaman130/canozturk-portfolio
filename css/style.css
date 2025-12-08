@@ -1,40 +1,80 @@
-/*
+ï»¿/*
     ==============================
-    NYP Prensipleri: Modülerlik
+    NYP Prensipleri: ModÃ¼lerlik
     ==============================
-    Bu dosya, projenin görünümünden (Style) sorumludur ve HTML'den (Yapı) ayrılmıştır.
+    Bu dosya, projenin gÃ¶rÃ¼nÃ¼mÃ¼nden (Style) sorumludur ve HTML'den (YapÄ±) ayrÄ±lmÄ±ÅŸtÄ±r.
 */
 
-/* 1. Renk Paleti Tanımlama (Can ÖZTÜRK İsteği: Kırmızı & Koyu Gri) */
+/* 1. Renk Paleti TanÄ±mlama (Can Ã–ZTÃœRK Ä°steÄŸi: KÄ±rmÄ±zÄ± & Koyu Gri) */
 :root {
-    /* Koyu Gri için değişken */
+    /* Koyu Gri iÃ§in deÄŸiÅŸken */
     --color-dark: #333;
-    /* Kırmızı için değişken */
+    /* KÄ±rmÄ±zÄ± iÃ§in deÄŸiÅŸken */
     --color-accent: #e74c3c;
-    /* Açık Gri/Beyaz için değişken */
+    /* AÃ§Ä±k Gri/Beyaz iÃ§in deÄŸiÅŸken */
     --color-light: #f4f4f4;
 }
 
-/* 2. Temel Vücut (Body) Ayarları */
+/* 2. Temel VÃ¼cut (Body) AyarlarÄ± */
 body {
-    font-family: Arial, sans-serif; /* Basit font seçimi */
+    font-family: Arial, sans-serif; /* Basit font seÃ§imi */
     line-height: 1.6;
     margin: 0;
     padding: 0;
     /* Koyu Gri Arka Plan */
     background: var(--color-dark);
-    /* Açık Gri Yazı Rengi */
+    /* AÃ§Ä±k Gri YazÄ± Rengi */
     color: var(--color-light);
 }
 
-/* 3. Bölüm (Section) Stilleri */
+/* 3. BÃ¶lÃ¼m (Section) Stilleri */
 section {
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 2px solid var(--color-accent); /* Bölümleri kırmızı çizgiyle ayırma */
+    border-bottom: 2px solid var(--color-accent); /* BÃ¶lÃ¼mleri kÄ±rmÄ±zÄ± Ã§izgiyle ayÄ±rma */
 }
 
-/* Başlık Stilleri */
+/* BaÅŸlÄ±k Stilleri */
 h1, h2 {
-    color: var(--color-accent); /* Tüm başlıklar Kırmızı */
+    color: var(--color-accent); /* TÃ¼m baÅŸlÄ±klar KÄ±rmÄ±zÄ± */
+}
+/* Navigasyon (MenÃ¼) Stili */
+nav {
+    /* Linkleri yatay hizalar */
+    display: flex;
+    /* Linkler arasÄ±nda boÅŸluk bÄ±rakÄ±r */
+    gap: 20px;
+    /* Navigasyonu ortalar */
+    justify-content: center;
+    /* Ãœstten ve alttan boÅŸluk verir */
+    padding: 20px 0;
+    /* KÄ±rmÄ±zÄ± renkte alt Ã§izgi */
+    border-bottom: 3px solid var(--color-accent);
+    /* Arka planÄ± koyu yapar */
+    background: var(--color-dark);
+}
+
+    /* Navigasyon Linklerinin Stili */
+    nav a {
+        /* AltÄ± Ã§izgiyi kaldÄ±rÄ±r */
+        text-decoration: none;
+        /* Rengi aÃ§Ä±k gri yapar */
+        color: var(--color-light);
+        /* YazÄ±yÄ± bÃ¼yÃ¼tÃ¼r ve kalÄ±n yapar */
+        font-size: 1.1em;
+        font-weight: bold;
+        /* Linklerin Ã¼zerine gelindiÄŸinde rengi kÄ±rmÄ±zÄ± yapar */
+        transition: color 0.3s ease;
+    }
+
+        /* Linkin Ã¼zerine gelindiÄŸinde (Hover) rengi deÄŸiÅŸtirir */
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+/* Section'lardaki YazÄ± Tiplerini GÃ¼zelleÅŸtirme */
+section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 20px auto; /* YazÄ± bloÄŸunu ortalar */
 }
