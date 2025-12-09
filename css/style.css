@@ -7,10 +7,10 @@
 
 /* 1. Renk Paleti Tanımlama (Can ÖZTÜRK İsteği: Kırmızı & Koyu Gri) */
 :root {
-    /* Koyu Gri için değişken */
-    --color-dark: #333;
+    /* Siyah için değişken */
+    --color-dark: #000;
     /* Kırmızı için değişken */
-    --color-accent: #e74c3c;
+    --color-accent: #B80707;
     /* Açık Gri/Beyaz için değişken */
     --color-light: #f4f4f4;
 }
