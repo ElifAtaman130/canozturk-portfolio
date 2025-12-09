@@ -26,9 +26,9 @@
     /* İkinci arkaplan için değişken */
     --second-bg-color: #131313;
     /* Açık Gri/Beyaz için değişken */
-    --text-color: #fff 
+    --text-color: #fff;
     /*Kırmızı için değişken*/
-    --main-color:#B80707
+    --main-color: #B80707;
 }
 html{
     font-size:60%;
@@ -112,4 +112,25 @@ border-bottom: 3px solid transperent;
     text-align:left;
     margin-top: 3rem;
 
+}
+.home-content h1{
+    font-size:7rem;
+    font-weight:700;
+    margin-top:1.5rem;
+    line-height:1;
+}
+.home-content h3{
+    margin-bottom:2rem;
+    margin-top:1rem;
+    font-size:3.5rem;
+
+}
+.home-img img{
+    width:32vw;
+    position:relative;
+    top:3rem;
+    border-radius:50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor:pointer;
+    transition:0.4s ease ease-in-out;
 }
