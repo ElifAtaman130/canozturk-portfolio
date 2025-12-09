@@ -4,77 +4,112 @@
     ==============================
     Bu dosya, projenin görünümünden (Style) sorumludur ve HTML'den (Yapı) ayrılmıştır.
 */
+/* RESET CSS START */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* 1. Renk Paleti Tanımlama (Can ÖZTÜRK İsteği: Kırmızı & Koyu Gri) */
-:root {
-    /* Siyah için değişken */
-    --color-dark: #000;
-    /* Kırmızı için değişken */
-    --color-accent: #B80707;
-    /* Açık Gri/Beyaz için değişken */
-    --color-light: #f4f4f4;
-}
-
-/* 2. Temel Vücut (Body) Ayarları */
-body {
-    font-family: Arial, sans-serif; /* Basit font seçimi */
-    line-height: 1.6;
+* {
     margin: 0;
     padding: 0;
-    /* Koyu Gri Arka Plan */
-    background: var(--color-dark);
-    /* Açık Gri Yazı Rengi */
-    color: var(--color-light);
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scrool-behavior: smooth;
+    font-family: "Poppins", sans-serif;
 }
 
-/* 3. Bölüm (Section) Stilleri */
-section {
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 2px solid var(--color-accent); /* Bölümleri kırmızı çizgiyle ayırma */
+/* RESET CSS END */
+/* 1. Renk Paleti Tanımlama (Can ÖZTÜRK İsteği: Kırmızı & Koyu Gri) */
+:root {
+    /* arkaplan için değişken */
+    --bg-color: #080808;
+    /* İkinci arkaplan için değişken */
+    --second-bg-color: #131313;
+    /* Açık Gri/Beyaz için değişken */
+    --text-color: #fff 
+    /*Kırmızı için değişken*/
+    --main-color:#B80707
 }
+html{
+    font-size:60%;
+    overflow-x:hidden;
 
-/* Başlık Stilleri */
-h1, h2 {
-    color: var(--color-accent); /* Tüm başlıklar Kırmızı */
 }
-/* Navigasyon (Menü) Stili */
-nav {
-    /* Linkleri yatay hizalar */
-    display: flex;
-    /* Linkler arasında boşluk bırakır */
-    gap: 20px;
-    /* Navigasyonu ortalar */
-    justify-content: center;
-    /* Üstten ve alttan boşluk verir */
-    padding: 20px 0;
-    /* Kırmızı renkte alt çizgi */
-    border-bottom: 3px solid var(--color-accent);
-    /* Arka planı koyu yapar */
-    background: var(--color-dark);
+/* 2. Temel Vücut (Body) Ayarları */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
+span{
+color:var(--main-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
 
-    /* Navigasyon Linklerinin Stili */
-    nav a {
-        /* Altı çizgiyi kaldırır */
-        text-decoration: none;
-        /* Rengi açık gri yapar */
-        color: var(--color-light);
-        /* Yazıyı büyütür ve kalın yapar */
-        font-size: 1.1em;
-        font-weight: bold;
-        /* Linklerin üzerine gelindiğinde rengi kırmızı yapar */
-        transition: color 0.3s ease;
-    }
+}
+/* HEADER START */
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:4rem 12% 4rem;
+    background-color:rgba(0,0,0,0.3);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:5;
+}
+.logo{
+    font-size: 3rem;
+    color:var(--text-color);
+    font-weight:800;
+    cursor:pointer;
+    transition:0.3s ease-in-out;
 
-        /* Linkin üzerine gelindiğinde (Hover) rengi değiştirir */
-        nav a:hover {
-            color: var(--color-accent);
-        }
+}
+.logo:hover{
+    transform:scale(1.1);
+}
+.logo span{
+    text-shadow:0 0 25px var(--main-color);
+    
+}
+.navbar a{
+font-size:1.8rem;
+color:var(--text-color);
+margin-left:4rem;
+font-weight:500;
+transition:0.3s ease;
+border-bottom: 3px solid transperent;
 
-/* Section'lardaki Yazı Tiplerini Güzelleştirme */
-section p {
-    font-size: 1.1em;
-    max-width: 800px;
-    margin: 20px auto; /* Yazı bloğunu ortalar */
+}
+.navbar a:hover,
+.navbar a:active{
+    color:var(--main-color);
+    border-bottom:3px solid var(--main-color);
+
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color:var(--main-color);
+    display:none;
+
+}
+.home{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap: 15rem;
+}
+.home-content{
+    display:flex;
+    flex-direction:column;
+    align-items:baseline;
+    justify-content:center;
+    text-align:left;
+    margin-top: 3rem;
+
 }
