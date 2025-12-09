@@ -5,42 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Can ÖZTÜRK - Portfolyo Sitesi</title>
 
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="icons8-c-50.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <i class='bx bx-user'></i>
-    <i class='bx bxs-user'></i>
-    <i class='bx bxl-facebook-square'></i>
 
-    <div class="container">
-
-        <nav>
-            <a href="#hakkimda">Hakkımda</a>
-            <a href="#projeler">Projeler</a>
-            <a href="#iletisim">İletişim</a>
+    <header class="header">
+        <a href="#home" class="logo">Can Öztürk</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Ana Sayfa</a>
+            <a href="#about">Hakkımda</a>
+            <a href="#skills">Beceriler/Uzmanlıklar</a>
+            <a href="#projects">Projeler</a>
+            <a href="#contact">İletişim</a>
         </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Merhaba, ben Can</h1>
+            <h3 class="text-animation">Ben <span>Frontend Developer</span></h3>
+            <p>Metin buraya sonra eklenecek.</p>
 
-        <section id="hakkimda">
-            <h1>Can ÖZTÜRK</h1>
-            <h2>Freelancer Proje Geliştirici</h2>
-            <p>Ben Can Öztürk, modern web teknolojilerine odaklanmış bir frontend geliştiricisiyim. Kullanıcı dostu arayüzler tasarlamayı ve temiz kod yazmayı hedefliyorum. Tasarım ve fonksiyonelliği birleştiren projeler üretmek benim için bir tutkudur.</p>
-        </section>
+            <div class="social-icons">
+                <a href="LINKEDIN_LINKINIZ" target="_blank" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/ElifAtaman130" target="_blank" title="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="INSTAGRAM_LINKINIZ" target="_blank" title="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="TWITTER_X_LINKINIZ" target="_blank" title="X / Twitter"><i class='bx bxl-twitter'></i></a>
+            </div>
 
-        <section id="projeler">
-            <h2>Projelerim</h2>
-            <p>Burada React, Vue veya Vanilla JS ile geliştirdiğim en yeni projelerimin bir seçkisi yer almaktadır. Her proje, temiz kodlama ve modern tasarım prensipleriyle oluşturulmuştur.</p>
-        </section>
-
-        <section id="iletisim">
-            <h2>İletişim</h2>
-            <p>Proje teklifleri, iş birlikleri veya sadece merhaba demek için bana ulaşın. E-posta: can.ozturk.dev@mail.com</p>
-        </section>
-
-    </div>
+            <div class="btn-group">
+                <a href="ozgecmis.pdf" class="btn" target="_blank">CV (Özgeçmiş)</a>
+                <a href="#contact" class="btn">Bana Ulaş</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="img/image.png" alt="Can Öztürk Portre" />
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hakkımda metni sonra eklenecek.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills / Expertise</h2>
+        <p>Beceriler ve uzmanlık alanları sonra eklenecek.</p>
+    </section>
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Proje detayları sonra eklenecek.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>İletişim bilgileri ve formu sonra eklenecek.</p>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
